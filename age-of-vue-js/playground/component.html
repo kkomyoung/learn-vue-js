@@ -8,31 +8,23 @@
 </head>
 <body>
   <div id="app">
-    <!-- ... -->
+    <app-header></app-header>
+    <app-content></app-content>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
-    // var options = {
-    //   el: '#app',
-    //   data: {
-    //     message: 'hi'
-    //   }
-    // };
+    // Vue.component('컴포넌트 이름', 컴포넌트 내용);
+      Vue.component('app-header', {
+        template: '<h1>Header</h1>'
+    });
 
-    // var vm = new Vue(options);
+    Vue.component('app-content', {
+      template: '<div>content</div>'
+    })
 
-    var vm = new Vue({
-      el: '#app',
-      data: {
-        message: 'hi'
-      },
-      methods: {
-
-      },
-      created: function() {
-
-      }
+    new Vue({
+      el: '#app'
     });
   </script>
 </body>
